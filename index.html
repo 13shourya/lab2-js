@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Loops Example</title>
+</head>
+<body>
+  <h1>JavaScript Loops Example</h1>
+
+  <p>Click the button to see numbers from 1 to 10 printed using different loops:</p>
+
+  <!-- Button to trigger the function that demonstrates loops -->
+  <button onclick="demonstrateLoops()">Show Numbers</button>
+
+  <p id="result"></p>
+
+  <script>
+    // Function to demonstrate different types of loops
+    function demonstrateLoops() {
+      // Initialize an empty string to hold the results
+      let resultText = '';
+
+      // Using a for loop to print numbers from 1 to 10
+      resultText += '<strong>Using for loop:</strong><br>';
+      for (let i = 1; i <= 10; i++) {
+        resultText += i + ' ';  // Add the number followed by a space
+      }
+      resultText += '<br><br>';
+
+      // Using a while loop to print numbers from 1 to 10
+      resultText += '<strong>Using while loop:</strong><br>';
+      let j = 1;
+      while (j <= 10) {
+        resultText += j + ' ';
+        j++;
+      }
+      resultText += '<br><br>';
+
+      // Using a do-while loop to print numbers from 1 to 10
+      resultText += '<strong>Using do-while loop:</strong><br>';
+      let k = 1;
+      do {
+        resultText += k + ' ';
+        k++;
+      } while (k <= 10);
+
+      // Display the result in the HTML element with id "result"
+      document.getElementById("result").innerHTML = resultText;
+    }
+  </script>
+</body>
+</html>
